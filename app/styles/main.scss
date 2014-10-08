@@ -28,7 +28,8 @@ body {
 }
 
 .search-bar{
-  width: 25%;
+  width: 358px !important;
+display: inline;
 height: 60%;
 }
 
@@ -47,4 +48,19 @@ vertical-align: sub;
     margin-top: 14px;
   }
 
+}
+
+.sidebar{
+  float:left;
+  width:25%;
+  .avata{
+    float:left;
+    margin-left: 56%;
+    margin-top: 5.5%;
+    border-radius: 5px;
+  }
+  .my-name{
+    float:left;
+    font-size: 26px;
+  }
 }

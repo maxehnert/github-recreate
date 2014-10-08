@@ -47,9 +47,10 @@
     </div>
     <div class="wrapper">
       <div class="sidebar">
-        <img class="avatar"height="230" width="230" src="https://avatars3.githubusercontent.com/u/8755250?v=2&amp;s=460"/>
-        <span>MY NAME</span>
-        <span>USERNAME</span>
+        <span class="avatar"></span>
+        <img class="avata" height="230" width="230" src="https://avatars3.githubusercontent.com/u/8755250?v=2&amp;s=460"/>
+        <span class="my-name"></span>
+        <span class="username"></span>
         <div class="loc-date">
 
         </div>
@@ -59,15 +60,38 @@
     <div class="footer">
     </div>
 
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
+<!-- My Inserted Scripts -->
+
+<!-- Script for inserting my Avatar into the sidebar -->
+    <!-- <script id="avatar" type="text/template">
+      <span><%=avatar_ur* %></span>
+
+    </script> -->
+
+<!-- Script for inserting My Name into the sidebar -->
+    <script id="name" type="text/template">
+      <span><%=name %></span>
+    </script>
+
+
+<script id="login" type="text/template">
+  <span><%=login %></span>
+</script>
+
+
+
+
+    <!-- build:js scripts/vendor.js
+    bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/underscore/underscore.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js scripts/main.js -->
+          <!--build:js scripts/main.js -->
+        <script src="scripts/repo.js"></script>
+        <script src="scripts/user.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
-</body>
+  </body>
 </html>
