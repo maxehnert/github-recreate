@@ -26,10 +26,10 @@
     <div class="header">
       <span class="mega-octicon octicon-mark-github"></span>
       <input class="search-bar" type="text" placeholder="Search Github">
-      <a href="https://github.com/explore">Explore</a><a href="https://gist.github.com/">Gist</a><a href="https://github.com/blog">Blog</a><a href="https://github.com/help">Help</a>
+      <a class="explore" href="https://github.com/explore">Explore</a><a href="https://gist.github.com/">Gist</a><a href="https://github.com/blog">Blog</a><a href="https://github.com/help">Help</a>
       <div class='right-icons'>
         <a href="github.com/maxehnert">
-          <img class="top-icon" height="20" width="20" src="https://avatars0.githubusercontent.com/u/8755250?v=2&amp"/>
+          <span class="avatar1"></span>
         </a>
         <a href="github.com/maxehnert">
           <span class="username"></span>
@@ -52,8 +52,9 @@
     <div class="wrapper">
       <div class="sidebar">
         <div class="sidebar-avatar">
-          <span class="avatar"></span>
-          <img class="avata" height="230" width="230" src="https://avatars3.githubusercontent.com/u/8755250?v=2&amp;s=460"/>
+          <a href="github.com/account">
+            <span class="avatar"></span>
+          </a>
         </div>
         <span class="my-name"></span>
         <span class="username"></span>
@@ -93,10 +94,16 @@
 <!-- My Inserted Scripts -->
 
   <!-- Script for inserting my Avatar into the sidebar -->
-    <!-- <script id="avatar" type="text/template">
-      <span><%=avatar_ur* %></span>
+    <script id="avatar" type="text/template">
+      <img src="<%=avatar_url%>"/>
 
-    </script> -->
+    </script>
+
+<!-- Script for inserting my Avatar into the header -->
+  <script id="avatar1" type="text/template">
+    <img src="<%=avatar_url%>" style="width:20px"/>
+
+  </script>
 
   <!-- Script for inserting My Name into the sidebar -->
     <script id="name" type="text/template">

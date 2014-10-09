@@ -27,8 +27,9 @@ body {
 
 .search-bar{
   width: 358px !important;
-display: inline;
-height: 60%;
+  display: inline;
+  height: 60%;
+  margin-left: 0.5%;
 }
 
 .mega-octicon{
@@ -37,11 +38,20 @@ height: 60%;
   vertical-align: sub;
   font-size: 28px;
 }
-
+.header{
+  .explore{
+    padding-left: 15px;
+    padding-right: 9px;
+  }
+}
 .right-icons{
   float:right;
-  padding-right: 21.7%;
+  padding-right: 13.8%;
 
+  a{
+    width:20px;
+    height:20px;
+  }
   .top-icon{
     border-radius: 3px;
     margin-top: 14px;
@@ -75,7 +85,12 @@ height: 60%;
   .sidebar-avatar{
     margin-left: 19%;
     margin-top: 7%;
+
+    .avatar{
+      border-radius: 5px;
+    }
   }
+
   .my-name{
     float: right;
     font-size: 26px;
