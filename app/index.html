@@ -31,8 +31,12 @@
         <a href="github.com/maxehnert">
           <img class="top-icon" height="20" width="20" src="https://avatars0.githubusercontent.com/u/8755250?v=2&amp"/>
         </a>
+        <a href="github.com/maxehnert">
+          <span class="username"></span>
+        </a>
         <a href="https://github.com/maxehnert?tab=repositories#" class="create-new">
           <span class="octicon octicon-plus"></span>
+          <span class="octicon octicon-triangle-down"></span>
         </a>
         <a href="github.com/notifications">
             <span class="octicon octicon-inbox"></span>
@@ -51,8 +55,30 @@
         <img class="avata" height="230" width="230" src="https://avatars3.githubusercontent.com/u/8755250?v=2&amp;s=460"/>
         <span class="my-name"></span>
         <span class="username"></span>
-        <div class="loc-date">
 
+        <div class="loc-date">
+          <p class="loc-date-location">
+          <span class="octicon octicon-location"></span>
+          <span class="my-location"></span>
+          </p>
+          <p class="loc-date-join">
+            <span class="octicon octicon-clock"></span>
+            <span>Joined on </span>
+            <!-- <span class="my-join-date"></span> -->
+            <time class="join-date" datetime="2014-09-12T23:08:22Z" day="numeric" is="local-time" month="short" year="numeric" title="Sep 12, 2014 7:08 PM EDT">Sep 12, 2014</time>
+          </p>
+        </div>
+        <div class="follow-star">
+          <div>
+            <span class="followers"></span>
+            <p>Followers</p>
+          </div>
+
+          <span>0</span>
+          <span class="following"></span>
+        </div>
+        <div class="follow-text">
+          <span>Starred</span><span>Following</span>
         </div>
       </div>
       <div class="main-content"></div>
@@ -62,23 +88,42 @@
 
 <!-- My Inserted Scripts -->
 
-<!-- Script for inserting my Avatar into the sidebar -->
+  <!-- Script for inserting my Avatar into the sidebar -->
     <!-- <script id="avatar" type="text/template">
       <span><%=avatar_ur* %></span>
 
     </script> -->
 
-<!-- Script for inserting My Name into the sidebar -->
+  <!-- Script for inserting My Name into the sidebar -->
     <script id="name" type="text/template">
       <span><%=name %></span>
     </script>
 
+  <!-- Script for inserting My User Name into the sidebar -->
+    <script id="login" type="text/template">
+      <span><%=login %></span>
+    </script>
 
-<script id="login" type="text/template">
-  <span><%=login %></span>
-</script>
 
+  <!-- Script for inserting My Location into the sidebar -->
+    <script id="location" type="text/template">
+      <span><%=location %></span>
+    </script>
 
+<!-- Script for inserting My Join Date into the sidebar -->
+    <script id="join-date" type="text/template">
+      <span><%=created_at %></span>
+    </script>
+
+<!-- Script for inserting Followers into the sidebar -->
+    <script id="followers" type="text/template">
+      <span><%=followers %></span>
+    </script>
+
+<!-- Script for inserting Following into the sidebar -->
+    <script id="following" type="text/template">
+      <span><%=following %></span>
+    </script>
 
 
     <!-- build:js scripts/vendor.js

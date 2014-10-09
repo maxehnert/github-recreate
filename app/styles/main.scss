@@ -11,9 +11,7 @@ a{
   font-size: 13px;
 }
 body {
-
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-
 }
 
 .header {
@@ -36,7 +34,8 @@ height: 60%;
 .mega-octicon{
   margin-left: 15.8%;
   margin-top: 9px;
-vertical-align: sub;
+  vertical-align: sub;
+  font-size: 28px;
 }
 
 .right-icons{
@@ -47,8 +46,25 @@ vertical-align: sub;
     border-radius: 3px;
     margin-top: 14px;
   }
-
+  .octicon-plus{
+    font-size:18px;
+  }
+  .octicon-triangle-down{
+    font-size:10px;
+    vertical-align: 2px;
+  }
+  .octicon-inbox{
+    font-size: 20px;
+  }
+  .octicon-gear{
+    font-size:18px;
+  }
+  octicon-sign-out{
+    font-size:16px;
+  }
 }
+
+/* SIDEBAR CONTENT */
 
 .sidebar{
   float:left;
@@ -61,15 +77,57 @@ vertical-align: sub;
     border-radius: 5px;
   }
   .my-name{
-    float:left;
+    float: right;
     font-size: 26px;
     font-family: Helvetica;
     font-weight: 600;
-    margin-left: 50%;
+    margin-right: 20%;
   }
-
   .username{
     font-size: 20px;
-    margin-left:50%;
+    margin-right: 30%;
+    float: right;
+    color:HSLA(0, 0%, 40%, 1);
   }
+}
+
+.loc-date{
+
+  .octicon-location{
+    color:HSLA(0, 0%, 80%, 1);
+    font-size:16px;
+  }
+  .loc-date-location{
+    float: right;
+    margin-right: -14%;
+    margin-top: 10%;
+  }
+  .octicon-clock{
+    color:HSLA(0, 0%, 80%, 1);
+    font-size:16px;
+  }
+  .loc-date-join{
+    float: right;
+    margin-right: 10%;
+  }
+
+}
+
+.follow-star{
+  float: right;
+  margin-right: -5%;
+  margin-top: 8%;
+  display: block;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1;
+  color:HSLA(210, 53%, 51%, 1);
+}
+
+.follow-text{
+  float: right;
+  margin-right: -41%;
+  margin-top: 16%;
+  font-family: Helvetica;
+
 }
