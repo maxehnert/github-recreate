@@ -65,27 +65,29 @@ height: 60%;
 }
 
 /* SIDEBAR CONTENT */
-
+.wrapper{
+  @include outer-container;
+}
 .sidebar{
+  @include span-columns(3.4);
   float:left;
-  width:32%;
 
-  .avata{
-    float:left;
-    margin-left: 50%;
-    margin-top: 4.5%;
-    border-radius: 5px;
+  .sidebar-avatar{
+    margin-left: 19%;
+    margin-top: 7%;
   }
   .my-name{
     float: right;
     font-size: 26px;
     font-family: Helvetica;
     font-weight: 600;
-    margin-right: 20%;
+    margin-right: 33%;
+  margin-top: -2%;
   }
   .username{
     font-size: 20px;
-    margin-right: 30%;
+    margin-right: 48%;
+    margin-top: -3%;
     float: right;
     color:HSLA(0, 0%, 40%, 1);
   }
@@ -99,8 +101,8 @@ height: 60%;
   }
   .loc-date-location{
     float: right;
-    margin-right: -14%;
-    margin-top: 10%;
+    margin-right: -23%;
+    margin-top: 16%;
   }
   .octicon-clock{
     color:HSLA(0, 0%, 80%, 1);
@@ -118,10 +120,19 @@ height: 60%;
   margin-right: -5%;
   margin-top: 8%;
   display: block;
-  font-size: 28px;
-  font-weight: bold;
-  line-height: 1;
-  color:HSLA(210, 53%, 51%, 1);
+
+  a{
+    display: inline-block;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1;
+    color:HSLA(210, 53%, 51%, 1);
+  }
+  p{
+    font-size: 11px;
+    color: HSLA(0, 0%, 60%, 1);
+    font-weight:300;
+  }
 }
 
 .follow-text{
@@ -130,4 +141,8 @@ height: 60%;
   margin-top: 16%;
   font-family: Helvetica;
 
+}
+
+.main-content{
+  @include span-columns(8.6);
 }

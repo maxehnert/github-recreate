@@ -51,8 +51,10 @@
     </div>
     <div class="wrapper">
       <div class="sidebar">
-        <span class="avatar"></span>
-        <img class="avata" height="230" width="230" src="https://avatars3.githubusercontent.com/u/8755250?v=2&amp;s=460"/>
+        <div class="sidebar-avatar">
+          <span class="avatar"></span>
+          <img class="avata" height="230" width="230" src="https://avatars3.githubusercontent.com/u/8755250?v=2&amp;s=460"/>
+        </div>
         <span class="my-name"></span>
         <span class="username"></span>
 
@@ -69,16 +71,18 @@
           </p>
         </div>
         <div class="follow-star">
-          <div>
+          <a href="https://github.com/maxehnert/followers">
             <span class="followers"></span>
             <p>Followers</p>
-          </div>
-
-          <span>0</span>
-          <span class="following"></span>
-        </div>
-        <div class="follow-text">
-          <span>Starred</span><span>Following</span>
+          </a>
+          <a href="https://github.com/stars">
+            <span>0</span>
+            <p>Starred</p>
+          </a>
+          <a href="https://github.com/maxehnert/following">
+            <span class="following"></span>
+            <p>Following</p>
+          </a>
         </div>
       </div>
       <div class="main-content"></div>
@@ -132,7 +136,7 @@
     <script src="../bower_components/underscore/underscore.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-
+        <script src="scripts/token.js"></script>
           <!--build:js scripts/main.js -->
         <script src="scripts/repo.js"></script>
         <script src="scripts/user.js"></script>
