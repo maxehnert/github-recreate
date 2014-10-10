@@ -77,7 +77,7 @@ body {
   @include outer-container;
 }
 .sidebar{
-  @include span-columns(3.4);
+  @include span-columns(3.35);
   float:left;
 
   .sidebar-avatar{
@@ -94,16 +94,21 @@ body {
     font-size: 26px;
     font-family: Helvetica;
     font-weight: 600;
-    margin-right: 33%;
+    margin-right: 32%;
   margin-top: -2%;
   }
   .username{
     font-size: 20px;
-    margin-right: 48%;
+    margin-right: 47%;
     margin-top: -3%;
     float: right;
     color:HSLA(0, 0%, 40%, 1);
   }
+}
+
+hr{
+  margin-top: 23.5%;
+  margin-left: 19%;
 }
 
 .loc-date{
@@ -111,11 +116,12 @@ body {
   .octicon-location{
     color:HSLA(0, 0%, 80%, 1);
     font-size:16px;
+    margin-left:-4%;
   }
   .loc-date-location{
     float: right;
-    margin-right: -23%;
-    margin-top: 16%;
+    margin-right: 56%;
+    margin-top: -4%;
   }
   .octicon-clock{
     color:HSLA(0, 0%, 80%, 1);
@@ -123,15 +129,20 @@ body {
   }
   .loc-date-join{
     float: right;
-    margin-right: 10%;
+    margin-right: 14.3%;
+    margin-top: -5%;
   }
 
 }
 
+.hr2{
+  margin-top: 26.7%;
+  margin-left: 19%;
+}
 .follow-star{
   float: right;
   margin-right: -5%;
-  margin-top: 8%;
+  margin-top: -3.5%;
   display: block;
 
   a{
@@ -145,17 +156,119 @@ body {
     font-size: 11px;
     color: HSLA(0, 0%, 60%, 1);
     font-weight:300;
+    margin-left: -32%;
+    margin-top: 5%;
+  }
+  .a-followers{
+    float: left;
+    margin-left: -66%;
+  }
+  .a-starred{
+    margin-left: -6%;
+    margin-right: 28%;
   }
 }
 
-.follow-text{
-  float: right;
-  margin-right: -41%;
-  margin-top: 16%;
-  font-family: Helvetica;
-
+.hr3{
+  margin-top: 25.5%;
+  margin-left: 19%;
 }
 
+.orgs{
+  margin-left: 19.5%;
+  margin-top: -1%;
+
+  .orgs-text{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: Helvetica;
+  }
+  img{
+    height:42px;
+  }
+}
+
+/* MAIN SECTION */
+
 .main-content{
-  @include span-columns(8.6);
+  @include span-columns(8.65);
+}
+
+.tabnav{
+  margin: 25px 64px 0 0;
+  border-bottom: 1px solid #ddd;
+
+  .tabnav-right{
+    float: right;
+    border: 1px solid HSLA(0, 0%, 84%, 1);
+    padding: 0 10px 5px 10px;
+    margin-top: -0.5%;
+    background-color: HSLA(0, 0%, 96%, 1);
+    border-radius: 3px;
+    margin-right: -1.5%;
+
+
+    a{
+      vertical-align: text-bottom;
+    }
+}
+.tabnav-right:hover{
+  background-color:HSLA(0, 0%, 80%, 1);
+  text-decoration:none;
+
+}
+}
+.tabnav-tabs{
+  position: relative;
+  display: inline-flex;
+  margin-left: 1%;
+  width: 85%;
+
+  .octicon{
+    color: HSLA(0, 0%, 40%, 1);
+  }
+
+  .contributions{
+    margin-right: 5%;
+    font-family: Helvetica;
+
+  }
+
+  .repositories{
+    margin-right: 5%;
+  }
+  span{
+    vertical-align: middle;
+  }
+}
+
+.tab-nav-sections{
+  font-size: 14px;
+  font-weight: 500;
+  color: HSLA(0, 0%, 40%, 1);
+  text-decoration:none;
+  font-family: Helvetica;
+}
+
+.filter-bar{
+  margin-top: 1.8%;
+
+  .repo-search-bar{
+    margin-left: -0.7%;
+    width: 33.5%;
+    float: left;
+    height: 34px;
+    font-size: 13px;
+  }
+
+  .search-button{
+    background-color: HSLA(0, 0%, 87%, 1);
+    padding: 1.2%;
+    border: 1px solid grey;
+    margin-left: 0.5%;
+    width: 9%;
+    color: black;
+    font-size: 13px;
+    font-weight: bold;
+  }
 }

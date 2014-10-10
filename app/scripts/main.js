@@ -73,6 +73,9 @@ var rendered_temp7 = _.template(temp_string7);
 var temp_string8 = $('#avatar1').html();
 var rendered_temp8 = _.template(temp_string8);
 
+//Inserting My Organziations into the sidebar
+var temp_string9 = $('#organizations').html();
+var rendered_temp9 = _.template(temp_string9);
 
 ///*** USER.JS FILE FUNCTION ***///
 
@@ -88,5 +91,5 @@ $('.my-join-date').append(rendered_temp5(user_data));
 $('.followers').append(rendered_temp6(user_data));
 $('.following').append(rendered_temp7(user_data));
 $('.avatar1').append(rendered_temp8(user_data));
-
+$('.organizations').append(rendered_temp9(user_data));
 });

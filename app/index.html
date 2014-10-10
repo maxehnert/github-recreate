@@ -58,7 +58,7 @@
         </div>
         <span class="my-name"></span>
         <span class="username"></span>
-
+        <hr></hr>
         <div class="loc-date">
           <p class="loc-date-location">
           <span class="octicon octicon-location"></span>
@@ -71,12 +71,13 @@
             <time class="join-date" datetime="2014-09-12T23:08:22Z" day="numeric" is="local-time" month="short" year="numeric" title="Sep 12, 2014 7:08 PM EDT">Sep 12, 2014</time>
           </p>
         </div>
+        <hr class="hr2"></hr>
         <div class="follow-star">
-          <a href="https://github.com/maxehnert/followers">
+          <a class="a-followers" href="https://github.com/maxehnert/followers">
             <span class="followers"></span>
             <p>Followers</p>
           </a>
-          <a href="https://github.com/stars">
+          <a class="a-starred" href="https://github.com/stars">
             <span>0</span>
             <p>Starred</p>
           </a>
@@ -85,8 +86,50 @@
             <p>Following</p>
           </a>
         </div>
+        <hr class="hr3"></hr>
+        <div class="orgs">
+          <p class="orgs-text">Organizations</p>
+          <div class="organizations">
+          </div>
+        </div>
       </div>
-      <div class="main-content"></div>
+      <div class="main-content">
+        <div class="tabnav">
+          <button class="tabnav-right" type="submit">
+            <a href="github.com/account">
+              <span class="octicon octicon-pencil"></span>
+              <span>Edit profile</span>
+          </button>
+          <div class="tabnav-tabs">
+            <div class="contributions">
+              <a href="github.com/maxehnert">
+                <span class="octicon octicon-diff-added"></span>
+                <span class="tab-nav-sections">Contributions</span>
+              </a>
+            </div>
+            <div class="repositories">
+              <a href="https://github.com/maxehnert?tab=repositories">
+                <span class="octicon octicon-repo"></span>
+                <span class="tab-nav-sections">Repositories</span>
+              </a>
+            </div>
+            <div class="public-acitivity">
+              <a href="github.com/maxehnert?tab=activity"
+                <span class="octicon octicon-rss"></span>
+                <span class="tab-nav-sections">Public acitivity</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="tab-content">
+          <div class="repo-tab">
+            <div class="filter-bar">
+              <input class="repo-search-bar" type="text" placeholder="Find a repository...">
+              <input type="submit" value="Search" class="search-button">
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="footer">
     </div>
@@ -136,9 +179,13 @@
       <span><%=following %></span>
     </script>
 
+<!-- Script for inserting my Organizations into the sidebar -->
+  <script id="organizations" type="text/template">
+    <a href="<%=organizations_url%>"><img alt="Front End Engineering" src="https://avatars2.githubusercontent.com/u/7996991?v=2&amp;s=84"/></a>
 
-    <!-- build:js scripts/vendor.js
-    bower:js -->
+  </script>
+
+    <!-- build:js scripts/vendor.js bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/underscore/underscore.js"></script>
     <!-- endbower -->
