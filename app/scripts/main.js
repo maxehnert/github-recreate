@@ -79,9 +79,6 @@ var rendered_temp9 = _.template(temp_string9);
 var temp_string10 = $('#starred').html();
 var rendered_temp10 = _.template(temp_string10);
 
-//Inserting Repo Name into the main section
-var temp_string11 = $('#repo-name').html();
-var rendered_temp11 = _.template(temp_string11);
 
 ///*** USER.JS FILE FUNCTION ***///
 
@@ -106,14 +103,25 @@ $('.organizations').append(rendered_temp9(user_data));
 //   });
 // });
 
+//********* REPO API ************//
+
+//Inserting Repo Name into the main section
+var temp_string11 = $('#repo-name').html();
+var rendered_temp11 = _.template(temp_string11);
+
+//Inserting Repo Created On Date into the main section
+var temp_string12 = $('#repo-updated-at').html();
+var rendered_temp12 = _.template(temp_string12);
+
+
 var test2 = _.each(abc);
-  var abc = $.getJSON(url2);
+var abc = $.getJSON(url2);
 
   abc.done(function(repo_data){
-  repo_data.forEach(function(b){
-    $('.repo-name').append(rendered_temp11(b)
-  )
-  });
+    repo_data.forEach(function(b){
+      $('.repo-name').append(rendered_temp11(b));
+      $('.repo-updated-at').append(rendered_temp12(b));
+    });
   });
 
 

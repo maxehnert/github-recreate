@@ -142,6 +142,7 @@
           </div>
           <div class="repo-content">
             <span class="repo-name"></span>
+            <span class="repo-updated-at"></span>
         </div>
       </div>
       </div>
@@ -206,10 +207,18 @@
 
     </script>
 
-<!-- Script for inserting my Organizations into the sidebar -->
+<!-- Script for inserting my Repo Names into the main section -->
     <script id="repo-name" type="text/template">
     <br  />
       <span><%=name%></span>
+      <hr />
+
+    </script>
+
+<!-- Script for inserting my Repo Created-On Date into the main section -->
+    <script id="repo-updated-at" type="text/template">
+    <br  />
+      <span><%=updated_at%></span>
       <hr />
 
     </script>
