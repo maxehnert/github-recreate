@@ -78,7 +78,7 @@
             <p>Followers</p>
           </a>
           <a class="a-starred" href="https://github.com/stars">
-            <span>0</span>
+            <span class="starred"></span>
             <p>Starred</p>
           </a>
           <a href="https://github.com/maxehnert/following">
@@ -140,7 +140,10 @@
               <span>New</span>
             </button>
           </div>
+          <div class="repo-content">
+            <span class="repo-name"></span>
         </div>
+      </div>
       </div>
     </div>
     <div class="footer">
@@ -196,6 +199,20 @@
     <a href="<%=organizations_url%>"><img alt="Front End Engineering" src="https://avatars2.githubusercontent.com/u/7996991?v=2&amp;s=84"/></a>
 
   </script>
+
+<!-- Script for inserting my Organizations into the sidebar -->
+    <script id="starred" type="text/template">
+      <span><%=stargazers_count%></span>
+
+    </script>
+
+<!-- Script for inserting my Organizations into the sidebar -->
+    <script id="repo-name" type="text/template">
+    <br  />
+      <span><%=name%></span>
+      <hr />
+
+    </script>
 
     <!-- build:js scripts/vendor.js bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>

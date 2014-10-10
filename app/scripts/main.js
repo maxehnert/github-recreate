@@ -1,6 +1,10 @@
 var user= 'maxehnert';
-
+//user api
 var url = 'https://api.github.com/users/' + user + '?b21ce09df6bf6f0aaefa2bc538eaa28eaf7e9dd7';
+//repo api
+var url2 = 'https://api.github.com/users/' + user + '/repos?b21ce09df6bf6f0aaefa2bc538eaa28eaf7e9dd7';
+//starred api
+var url3= 'https://api.github.com/users/' + user + '/starred?b21ce09df6bf6f0aaefa2bc538eaa28eaf7e9dd7'
 
 //var template= $('#user_info').html();
 //var rendered = _.template(template);
@@ -9,12 +13,6 @@ var url = 'https://api.github.com/users/' + user + '?b21ce09df6bf6f0aaefa2bc538e
 // //enter in here as many statements that pertain to this 'user_data' as possible
 //
 // // example~~~~> $('.hero-unit').append(rendered(user_data));
-// $('.my-name').append(rendered_temp(user_data));
-// $('.username').append(rendered_temp(user));
-// $('.my-location').append(rendered_temp(user));
-// $('.my-join-date').append(rendered_temp(user));
-// $('.followers').append(rendered_temp(user));
-// $('.following').append(rendered_temp(user));
 //
 // });
 //
@@ -77,12 +75,19 @@ var rendered_temp8 = _.template(temp_string8);
 var temp_string9 = $('#organizations').html();
 var rendered_temp9 = _.template(temp_string9);
 
+//Inserting My Starred Count into the sidebar
+var temp_string10 = $('#starred').html();
+var rendered_temp10 = _.template(temp_string10);
+
+//Inserting Repo Name into the main section
+var temp_string11 = $('#repo-name').html();
+var rendered_temp11 = _.template(temp_string11);
+
 ///*** USER.JS FILE FUNCTION ***///
 
 var test = $.getJSON(url).done(function(user_data){
 //enter in here as many statements that pertain to this 'user_data' as possible
 
-// example~~~~> $('.hero-unit').append(rendered(user_data));
 $('.avatar').append(rendered_temp1(user_data));
 $('.my-name').append(rendered_temp2(user_data));
 $('.username').append(rendered_temp3(user_data));
@@ -93,3 +98,32 @@ $('.following').append(rendered_temp7(user_data));
 $('.avatar1').append(rendered_temp8(user_data));
 $('.organizations').append(rendered_temp9(user_data));
 });
+
+
+// var test3 = $.getJSON(url3).each(function(a){
+//   a.done(function(user_data){
+//     $('.starred').append(rendered_temp10(user_data));
+//   });
+// });
+
+var test2 = _.each(abc);
+  var abc = $.getJSON(url2);
+
+  abc.done(function(repo_data){
+  repo_data.forEach(function(b){
+    $('.repo-name').append(rendered_temp11(b)
+  )
+  });
+  });
+
+
+
+  ////Build item seller
+// api.results.forEach(function (a){
+//   list_seller = "<span>" + a.Shop.shop_name + "</span>"
+//
+//       a.Images.forEach(function(b){
+//
+//         list_image = "<img src='" + b.url_fullxfull + "' />";
+//
+//       });
