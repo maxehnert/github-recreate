@@ -6,32 +6,9 @@ var url2 = 'https://api.github.com/users/' + user + '/repos?b21ce09df6bf6f0aaefa
 //starred api
 var url3= 'https://api.github.com/users/' + user + '/starred?b21ce09df6bf6f0aaefa2bc538eaa28eaf7e9dd7'
 
-//var template= $('#user_info').html();
-//var rendered = _.template(template);
 
-// var test = $.getJSON(url).done(function(user_data){
-// //enter in here as many statements that pertain to this 'user_data' as possible
-//
-// // example~~~~> $('.hero-unit').append(rendered(user_data));
-//
-// });
-//
-// /////////// HTML //////////////
-//   <div class="hero-unit">
-//       <h1>'Allo, 'Allo!</h1>
-//
-//     <script type="text/template" id="user_info">
-//       <img src="<%= avatar_url%>" style="width:150px"/>
-//       <ul>
-//       <li><%= name %></li>
-//
-//       <li>User Name <%= login %></li>
-//     </script>
-//           </ul>
-//
-//     </div>
 
-///**********************************************///
+///**************** USER API ******************///
 
 //Inserting My Avatar into the sidebar
 var temp_string1 = $('#avatar').html();
@@ -85,23 +62,18 @@ var rendered_temp10 = _.template(temp_string10);
 var test = $.getJSON(url).done(function(user_data){
 //enter in here as many statements that pertain to this 'user_data' as possible
 
-$('.avatar').append(rendered_temp1(user_data));
-$('.my-name').append(rendered_temp2(user_data));
-$('.username').append(rendered_temp3(user_data));
-$('.my-location').append(rendered_temp4(user_data));
-$('.my-join-date').append(rendered_temp5(user_data));
-$('.followers').append(rendered_temp6(user_data));
-$('.following').append(rendered_temp7(user_data));
-$('.avatar1').append(rendered_temp8(user_data));
-$('.organizations').append(rendered_temp9(user_data));
+  $('.avatar').append(rendered_temp1(user_data));
+  $('.my-name').append(rendered_temp2(user_data));
+  $('.username').append(rendered_temp3(user_data));
+  $('.my-location').append(rendered_temp4(user_data));
+  $('.my-join-date').append(rendered_temp5(user_data));
+  $('.followers').append(rendered_temp6(user_data));
+  $('.following').append(rendered_temp7(user_data));
+  $('.avatar1').append(rendered_temp8(user_data));
+  $('.organizations').append(rendered_temp9(user_data));
 });
 
 
-// var test3 = $.getJSON(url3).each(function(a){
-//   a.done(function(user_data){
-//     $('.starred').append(rendered_temp10(user_data));
-//   });
-// });
 
 //********* REPO API ************//
 
@@ -113,7 +85,19 @@ var rendered_temp11 = _.template(temp_string11);
 var temp_string12 = $('#repo-updated-at').html();
 var rendered_temp12 = _.template(temp_string12);
 
+//Inserting Repo Language into the main section
+var temp_string13 = $('#repo-language').html();
+var rendered_temp13 = _.template(temp_string13);
 
+//Inserting Repo Stars into the main section
+var temp_string14 = $('#repo-stars-count').html();
+var rendered_temp14 = _.template(temp_string14);
+
+//Inserting Repo Stars into the main section
+var temp_string15 = $('#repo-fork-count').html();
+var rendered_temp15 = _.template(temp_string15);
+
+//************************//
 var test2 = _.each(abc);
 var abc = $.getJSON(url2);
 
@@ -121,17 +105,26 @@ var abc = $.getJSON(url2);
     repo_data.forEach(function(b){
       $('.repo-name').append(rendered_temp11(b));
       $('.repo-updated-at').append(rendered_temp12(b));
+      $('.repo-language').append(rendered_temp13(b));
+      $('.repo-stars-count').append(rendered_temp14(b));
+      $('.repo-fork-count').append(rendered_temp15(b));
     });
   });
 
 
 
-  ////Build item seller
-// api.results.forEach(function (a){
-//   list_seller = "<span>" + a.Shop.shop_name + "</span>"
-//
-//       a.Images.forEach(function(b){
-//
-//         list_image = "<img src='" + b.url_fullxfull + "' />";
-//
-//       });
+//********* STARRED API ************//
+
+var temp_string20 = $('#starred').html();
+var rendered_temp20 = _.template(temp_string20);
+
+
+//*********************//
+var test3 = _.each(ab);
+var ab = $.getJSON(url3);
+
+  ab.done(function(star_data){
+    star_data.forEach(function(c){
+      $('.starred').append(rendered_temp20(c));
+    });
+  });

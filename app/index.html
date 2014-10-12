@@ -125,7 +125,7 @@
           <div class="repo-tab">
             <div class="filter-bar">
               <input class="repo-search-bar" type="text" placeholder="Find a repository...">
-              <input type="submit" value="Search" class="search-button">
+              <input class="search-button"type="submit" value="Search">
             </div>
             <div class="repo-filters">
               <a href="https://github.com/maxehnert?tab=repositories#">All</a>
@@ -140,14 +140,63 @@
               <span>New</span>
             </button>
           </div>
+          <hr class="repo-hr"/>
           <div class="repo-content">
-            <span class="repo-name"></span>
-            <span class="repo-updated-at"></span>
+            <ul>
+              <li class="repo-name"></li>
+              <li class="repo-updated-at"></li>
+              <li class="repo-language"></li>
+              <li class="repo-stars-count"></li>
+              <li class="repo-fork-count"></li>
+            </ul>
         </div>
       </div>
       </div>
     </div>
     <div class="footer">
+      <hr class="footer-hr" />
+      <div class="site-footer">
+        <ul class="footer-links-right">
+          <li class="footer-status">
+            <a href="https://status.github.com/">Status</a>
+          </li>
+          <li class="footer-api">
+            <a href="http://developer.github.com">API</a>
+          </li>
+          <li class="footer-training">
+            <a href="http://training.github.com">Training</a>
+          </li>
+          <li class="footer-shop">
+            <a href="http://shop.github.com">Shop</a>
+          </li>
+          <li class="footer-blog">
+            <a href="/blog">Blog</a>
+          </li>
+          <li class="footer-about">
+            <a href="/about">About</a>
+          </li>
+        </ul>
+        <a href="https://github.com" class="footer-icon">
+          <span class="octicon octicon-mark-github"></span>
+        </a>
+        <ul class="footer-links-left">
+          <li class="footer-copyright">
+            © 2014 GitHub, Inc.
+          </li>
+          <li class="footer-terms">
+            <a href="github.com/site/terms">Terms</a>
+          </li>
+          <li class="footer-privacy">
+            <a href="github.com/site/privacy">Privacy</a>
+          </li>
+          <li class="footer-security">
+            <a href="github.com/security">Security</a>
+          </li>
+          <li class="footer-contact">
+            <a href="github.com/contact">Contact</a>
+          </li>
+        </ul>
+      </div>
     </div>
 
 <!-- My Inserted Scripts -->
@@ -207,20 +256,50 @@
 
     </script>
 
+<!--***************** MAIN SECTION SCRIPTS ****************-->
+
+
 <!-- Script for inserting my Repo Names into the main section -->
     <script id="repo-name" type="text/template">
-    <br  />
-      <span><%=name%></span>
-      <hr />
-
+      <li>
+        <a href="https://github.com/maxehnert/<%=name%>"><%=name%></a>
+      </li>
+      <hr class="repo-name-hr" />
     </script>
 
 <!-- Script for inserting my Repo Created-On Date into the main section -->
     <script id="repo-updated-at" type="text/template">
-    <br  />
-      <span><%=updated_at%></span>
-      <hr />
+      <li class="repo-updated-at-scpt">Updated <time datetime='<%=updated_at%>' is="relative-time"><%=updated_at%></time> days ago</li>
+      <!-- <li><%=updated_at%></li> -->
+      <br class="updated-at-br" />
+    </script>
 
+<!-- Script for inserting my Repo Language into the main section -->
+    <script id="repo-language" type="text/template">
+      <li><%=language%></li>
+      <br class="language-br" />
+    </script>
+
+<!-- Script for inserting my Starred Repos into the main section -->
+    <script id="repo-stars-count" type="text/template">
+      <li>
+        <a href="https://github.com/maxehnert/github-recreate/stargazers">
+          <span class="octicon octicon-star"></span>
+          <%=stargazers_count%>
+        </a>
+      </li>
+      <br class="stars-br" />
+    </script>
+
+<!-- Script for inserting my Forked Repos into the main section -->
+    <script id="repo-fork-count" type="text/template">
+      <li>
+        <a href="https://github.com/maxehnert/github-recreate/forks">
+          <span class="octicon octicon-git-branch"></span>
+          <%=forks%>
+        </a>
+      </li>
+      <br class="forks-br" />
     </script>
 
     <!-- build:js scripts/vendor.js bower:js -->
