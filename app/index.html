@@ -20,7 +20,9 @@
 
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="../bower_components/modernizr/modernizr.js"></script>
+    <script src="../bower_components/moment/moment.js"></script>
     <!-- endbuild -->
+
   </head>
   <body>
     <div class="header">
@@ -125,7 +127,7 @@
           <div class="repo-tab">
             <div class="filter-bar">
               <input class="repo-search-bar" type="text" placeholder="Find a repository...">
-              <input class="search-button"type="submit" value="Search">
+              <button class="search-button"type="submit" value="Search" >Search</button>
             </div>
             <div class="repo-filters">
               <a href="https://github.com/maxehnert?tab=repositories#">All</a>
@@ -145,9 +147,13 @@
             <ul>
               <li class="repo-name"></li>
               <li class="repo-updated-at"></li>
+            </ul>
+            <ul>
               <li class="repo-language"></li>
-              <li class="repo-stars-count"></li>
-              <li class="repo-fork-count"></li>
+              <ul>
+                <li class="repo-stars-count"></li>
+                <li class="repo-fork-count"></li>
+              <ul>
             </ul>
         </div>
       </div>
@@ -203,13 +209,13 @@
 
   <!-- Script for inserting my Avatar into the sidebar -->
     <script id="avatar" type="text/template">
-      <img src="<%=avatar_url%>"/>
+      <img src="<%=avatar_url%>" style="border-radius: 5px;"/>
 
     </script>
 
 <!-- Script for inserting my Avatar into the header -->
   <script id="avatar1" type="text/template">
-    <img src="<%=avatar_url%>" style="width:20px"/>
+    <img src="<%=avatar_url%>" style="width:20px; border-radius: 2px;"/>
 
   </script>
 
@@ -276,7 +282,7 @@
 
 <!-- Script for inserting my Repo Language into the main section -->
     <script id="repo-language" type="text/template">
-      <li><%=language%></li>
+      <li class="repo-language-script"><%=language%></li>
       <br class="language-br" />
     </script>
 

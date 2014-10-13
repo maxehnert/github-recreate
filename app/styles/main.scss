@@ -31,6 +31,7 @@ body {
   display: inline;
   height: 60%;
   margin-left: 0.5%;
+  font-size: 12px;
 }
 
 .mega-octicon{
@@ -94,9 +95,7 @@ body {
     margin-left: 19%;
     margin-top: 7%;
 
-    .avatar{
-      border-radius: 5px;
-    }
+
   }
 
   .my-name{
@@ -344,6 +343,10 @@ hr{
   font-size: 14px;
 }
 
+.repo-tab-new:hover{
+  background-color: HSLA(105, 44%, 43%, 1);
+
+}
 .repo-hr{
   margin-top: 2.2%;
   margin-left: -1%;
@@ -385,7 +388,7 @@ line-height: 5.8;
 }
 
 .repo-language{
-  margin-top: -202%;
+  margin-top: -213%;
   margin-right: 15%;
   float: right;
   font-size: 12px;
@@ -393,8 +396,11 @@ line-height: 5.8;
   color: HSLA(0, 0%, 53%, 1);
 }
 
+.repo-language-script{
+  margin-top: 139%;
+}
 .language-br{
-  line-height: 8.25;
+  //line-height: 8.25;
 }
 
 .repo-stars-count{
@@ -437,6 +443,8 @@ line-height: 5.8;
   line-height:5.3;
 }
 
+
+//*********** FOOTER *************//
 .footer{
   margin: 0 16%;
   margin-bottom: 2%;
