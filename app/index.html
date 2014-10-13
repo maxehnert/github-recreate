@@ -20,7 +20,6 @@
 
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="../bower_components/modernizr/modernizr.js"></script>
-    <script src="../bower_components/moment/moment.js"></script>
     <!-- endbuild -->
 
   </head>
@@ -213,11 +212,11 @@
 
     </script>
 
-<!-- Script for inserting my Avatar into the header -->
-  <script id="avatar1" type="text/template">
-    <img src="<%=avatar_url%>" style="width:20px; border-radius: 2px;"/>
+  <!-- Script for inserting my Avatar into the header -->
+    <script id="avatar1" type="text/template">
+      <img src="<%=avatar_url%>" style="width:20px; border-radius: 2px;"/>
 
-  </script>
+    </script>
 
   <!-- Script for inserting My Name into the sidebar -->
     <script id="name" type="text/template">
@@ -235,32 +234,32 @@
       <span><%=location %></span>
     </script>
 
-<!-- Script for inserting My Join Date into the sidebar -->
-    <script id="join-date" type="text/template">
-      <span><%=created_at %></span>
-    </script>
+  <!-- Script for inserting My Join Date into the sidebar -->
+      <script id="join-date" type="text/template">
+        <span><%=created_at %></span>
+      </script>
 
-<!-- Script for inserting Followers into the sidebar -->
-    <script id="followers" type="text/template">
-      <span><%=followers %></span>
-    </script>
+  <!-- Script for inserting Followers into the sidebar -->
+      <script id="followers" type="text/template">
+        <span><%=followers %></span>
+      </script>
 
-<!-- Script for inserting Following into the sidebar -->
-    <script id="following" type="text/template">
-      <span><%=following %></span>
-    </script>
+  <!-- Script for inserting Following into the sidebar -->
+      <script id="following" type="text/template">
+        <span><%=following %></span>
+      </script>
 
-<!-- Script for inserting my Organizations into the sidebar -->
-  <script id="organizations" type="text/template">
-    <a href="<%=organizations_url%>"><img alt="Front End Engineering" src="https://avatars2.githubusercontent.com/u/7996991?v=2&amp;s=84"/></a>
-
-  </script>
-
-<!-- Script for inserting my Organizations into the sidebar -->
-    <script id="starred" type="text/template">
-      <span><%=stargazers_count%></span>
+  <!-- Script for inserting my Organizations into the sidebar -->
+    <script id="organizations" type="text/template">
+      <a href="<%=organizations_url%>"><img alt="Front End Engineering" src="https://avatars2.githubusercontent.com/u/7996991?v=2&amp;s=84"/></a>
 
     </script>
+
+  <!-- Script for inserting my Organizations into the sidebar -->
+      <script id="starred" type="text/template">
+        <span><%=stargazers_count%></span>
+
+      </script>
 
 <!--***************** MAIN SECTION SCRIPTS ****************-->
 
@@ -310,6 +309,7 @@
 
     <!-- build:js scripts/vendor.js bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/moment/moment.js"></script>
     <script src="../bower_components/underscore/underscore.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
