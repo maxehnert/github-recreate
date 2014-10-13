@@ -21,18 +21,23 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="../bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+
   </head>
   <body>
     <div class="header">
       <span class="mega-octicon octicon-mark-github"></span>
       <input class="search-bar" type="text" placeholder="Search Github">
-      <a href="https://github.com/explore">Explore</a><a href="https://gist.github.com/">Gist</a><a href="https://github.com/blog">Blog</a><a href="https://github.com/help">Help</a>
+      <a class="explore" href="https://github.com/explore">Explore</a><a href="https://gist.github.com/">Gist</a><a href="https://github.com/blog">Blog</a><a href="https://github.com/help">Help</a>
+      <a href="github.com/maxehnert">
+        <span class="avatar1"></span>
+      </a>
       <div class='right-icons'>
         <a href="github.com/maxehnert">
-          <img class="top-icon" height="20" width="20" src="https://avatars0.githubusercontent.com/u/8755250?v=2&amp"/>
+          <span class="username"></span>
         </a>
         <a href="https://github.com/maxehnert?tab=repositories#" class="create-new">
           <span class="octicon octicon-plus"></span>
+          <span class="octicon octicon-triangle-down"></span>
         </a>
         <a href="github.com/notifications">
             <span class="octicon octicon-inbox"></span>
@@ -47,27 +52,270 @@
     </div>
     <div class="wrapper">
       <div class="sidebar">
-        <img class="avatar"height="230" width="230" src="https://avatars3.githubusercontent.com/u/8755250?v=2&amp;s=460"/>
-        <span>MY NAME</span>
-        <span>USERNAME</span>
+        <div class="sidebar-avatar">
+          <a href="github.com/account">
+            <span class="avatar"></span>
+          </a>
+        </div>
+        <span class="my-name"></span>
+        <span class="username"></span>
+        <hr></hr>
         <div class="loc-date">
-
+          <p class="loc-date-location">
+          <span class="octicon octicon-location"></span>
+          <span class="my-location"></span>
+          </p>
+          <p class="loc-date-join">
+            <span class="octicon octicon-clock"></span>
+            <span>Joined on </span>
+            <!-- <span class="my-join-date"></span> -->
+            <time class="join-date" datetime="2014-09-12T23:08:22Z" day="numeric" is="local-time" month="short" year="numeric" title="Sep 12, 2014 7:08 PM EDT">Sep 12, 2014</time>
+          </p>
+        </div>
+        <hr class="hr2"></hr>
+        <div class="follow-star">
+          <a class="a-followers" href="https://github.com/maxehnert/followers">
+            <span class="followers"></span>
+            <p>Followers</p>
+          </a>
+          <a class="a-starred" href="https://github.com/stars">
+            <span class="starred"></span>
+            <p>Starred</p>
+          </a>
+          <a href="https://github.com/maxehnert/following">
+            <span class="following"></span>
+            <p>Following</p>
+          </a>
+        </div>
+        <hr class="hr3"></hr>
+        <div class="orgs">
+          <p class="orgs-text">Organizations</p>
+          <div class="organizations">
+          </div>
         </div>
       </div>
-      <div class="main-content"></div>
+      <div class="main-content">
+        <div class="tabnav">
+          <button class="tabnav-right" type="submit">
+            <a href="github.com/account">
+              <span class="octicon octicon-pencil"></span>
+              <span>Edit profile</span>
+          </button>
+          <div class="tabnav-tabs">
+            <div class="contributions">
+              <a href="github.com/maxehnert">
+                <span class="octicon octicon-diff-added"></span>
+                <span class="tab-nav-sections">Contributions</span>
+              </a>
+            </div>
+            <div class="repositories">
+              <a href="https://github.com/maxehnert?tab=repositories">
+                <span class="octicon octicon-repo"></span>
+                <span class="tab-nav-sections">Repositories</span>
+              </a>
+            </div>
+            <div class="public-acitivity">
+              <a href="github.com/maxehnert?tab=activity"
+                <span class="octicon octicon-rss"></span>
+                <span class="tab-nav-sections">Public acitivity</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="tab-content">
+          <div class="repo-tab">
+            <div class="filter-bar">
+              <input class="repo-search-bar" type="text" placeholder="Find a repository...">
+              <button class="search-button"type="submit" value="Search" >Search</button>
+            </div>
+            <div class="repo-filters">
+              <a href="https://github.com/maxehnert?tab=repositories#">All</a>
+              <a class="repo-public" href="https://github.com/maxehnert?tab=repositories#">Public</a>
+              <a href="https://github.com/maxehnert?tab=repositories#">Private</a>
+              <a class="repo-sources" href="https://github.com/maxehnert?tab=repositories#">Sources</a>
+              <a href="https://github.com/maxehnert?tab=repositories#">Forks</a>
+              <a class="repo-mirrors" href="https://github.com/maxehnert?tab=repositories#">Mirrors</a>
+            </div>
+            <button class="repo-tab-new" type="submit">
+              <span class="octicon octicon-repo"></span>
+              <span>New</span>
+            </button>
+          </div>
+          <hr class="repo-hr"/>
+          <div class="repo-content">
+            <ul>
+              <li class="repo-name"></li>
+              <li class="repo-updated-at"></li>
+            </ul>
+            <ul>
+              <li class="repo-language"></li>
+              <ul>
+                <li class="repo-stars-count"></li>
+                <li class="repo-fork-count"></li>
+              <ul>
+            </ul>
+        </div>
+      </div>
+      </div>
     </div>
     <div class="footer">
+      <hr class="footer-hr" />
+      <div class="site-footer">
+        <ul class="footer-links-right">
+          <li class="footer-status">
+            <a href="https://status.github.com/">Status</a>
+          </li>
+          <li class="footer-api">
+            <a href="http://developer.github.com">API</a>
+          </li>
+          <li class="footer-training">
+            <a href="http://training.github.com">Training</a>
+          </li>
+          <li class="footer-shop">
+            <a href="http://shop.github.com">Shop</a>
+          </li>
+          <li class="footer-blog">
+            <a href="/blog">Blog</a>
+          </li>
+          <li class="footer-about">
+            <a href="/about">About</a>
+          </li>
+        </ul>
+        <a href="https://github.com" class="footer-icon">
+          <span class="octicon octicon-mark-github"></span>
+        </a>
+        <ul class="footer-links-left">
+          <li class="footer-copyright">
+            © 2014 GitHub, Inc.
+          </li>
+          <li class="footer-terms">
+            <a href="github.com/site/terms">Terms</a>
+          </li>
+          <li class="footer-privacy">
+            <a href="github.com/site/privacy">Privacy</a>
+          </li>
+          <li class="footer-security">
+            <a href="github.com/security">Security</a>
+          </li>
+          <li class="footer-contact">
+            <a href="github.com/contact">Contact</a>
+          </li>
+        </ul>
+      </div>
     </div>
 
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
+<!-- My Inserted Scripts -->
+
+  <!-- Script for inserting my Avatar into the sidebar -->
+    <script id="avatar" type="text/template">
+      <img src="<%=avatar_url%>" style="border-radius: 5px;"/>
+
+    </script>
+
+  <!-- Script for inserting my Avatar into the header -->
+    <script id="avatar1" type="text/template">
+      <img src="<%=avatar_url%>" style="width:20px; border-radius: 2px;"/>
+
+    </script>
+
+  <!-- Script for inserting My Name into the sidebar -->
+    <script id="name" type="text/template">
+      <span><%=name %></span>
+    </script>
+
+  <!-- Script for inserting My User Name into the sidebar -->
+    <script id="login" type="text/template">
+      <span><%=login %></span>
+    </script>
+
+
+  <!-- Script for inserting My Location into the sidebar -->
+    <script id="location" type="text/template">
+      <span><%=location %></span>
+    </script>
+
+  <!-- Script for inserting My Join Date into the sidebar -->
+      <script id="join-date" type="text/template">
+        <span><%=created_at %></span>
+      </script>
+
+  <!-- Script for inserting Followers into the sidebar -->
+      <script id="followers" type="text/template">
+        <span><%=followers %></span>
+      </script>
+
+  <!-- Script for inserting Following into the sidebar -->
+      <script id="following" type="text/template">
+        <span><%=following %></span>
+      </script>
+
+  <!-- Script for inserting my Organizations into the sidebar -->
+    <script id="organizations" type="text/template">
+      <a href="<%=organizations_url%>"><img alt="Front End Engineering" src="https://avatars2.githubusercontent.com/u/7996991?v=2&amp;s=84"/></a>
+
+    </script>
+
+  <!-- Script for inserting my Organizations into the sidebar -->
+      <script id="starred" type="text/template">
+        <span><%=stargazers_count%></span>
+
+      </script>
+
+<!--***************** MAIN SECTION SCRIPTS ****************-->
+
+
+  <!-- Script for inserting my Repo Names into the main section -->
+      <script id="repo-name" type="text/template">
+        <li>
+          <a href="https://github.com/maxehnert/<%=name%>"><%=name%></a>
+        </li>
+        <hr class="repo-name-hr" />
+      </script>
+
+  <!-- Script for inserting my Repo Created-On Date into the main section -->
+      <script id="repo-updated-at" type="text/template">
+        <li class="repo-updated-at-scpt">Updated <time datetime='<%=updated_at%>' is="relative-time"><%=updated_at%></time> days ago</li>
+        <!-- <li><%=updated_at%></li> -->
+        <br class="updated-at-br" />
+      </script>
+
+  <!-- Script for inserting my Repo Language into the main section -->
+      <script id="repo-language" type="text/template">
+        <li class="repo-language-script"><%=language%></li>
+        <br class="language-br" />
+      </script>
+
+  <!-- Script for inserting my Starred Repos into the main section -->
+      <script id="repo-stars-count" type="text/template">
+        <li>
+          <a href="https://github.com/maxehnert/github-recreate/stargazers">
+            <span class="octicon octicon-star"></span>
+            <%=stargazers_count%>
+          </a>
+        </li>
+        <br class="stars-br" />
+      </script>
+
+  <!-- Script for inserting my Forked Repos into the main section -->
+      <script id="repo-fork-count" type="text/template">
+        <li>
+          <a href="https://github.com/maxehnert/github-recreate/forks">
+            <span class="octicon octicon-git-branch"></span>
+            <%=forks%>
+          </a>
+        </li>
+        <br class="forks-br" />
+      </script>
+
+    <!-- build:js scripts/vendor.js bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/moment/moment.js"></script>
     <script src="../bower_components/underscore/underscore.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-
-        <!-- build:js scripts/main.js -->
+        <script src="scripts/token.js"></script>
+          <!--build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
-</body>
+  </body>
 </html>
